@@ -262,6 +262,41 @@
         .float-badge:nth-child(7){top:42%;right:4%;animation:floatA 8s ease-in-out infinite}
         .float-badge:nth-child(8){top:57%;right:18%;animation:floatB 10s ease-in-out infinite}
 
+        /* ── MOBILE: only show 3 well-spaced badges ── */
+        @media (max-width: 600px) {
+    .float-badge:nth-child(2),
+    .float-badge:nth-child(3),
+    .float-badge:nth-child(7),
+    .float-badge:nth-child(8) {
+        display: none;
+    }
+
+    .float-badge:nth-child(1) { 
+        top: 12%; 
+        left: 4%; 
+    }   /* 🧬 Genetics */
+
+    .float-badge:nth-child(5) { 
+        top: 12%; 
+        right: 4%; 
+        left: auto; 
+    }   /* 🫀 Anatomy */
+
+    .float-badge:nth-child(6) { 
+        bottom: 12%; 
+        left: 4%; 
+        top: auto; 
+        right: auto; 
+    }   /* 🦠 Microbiology */
+
+    .float-badge:nth-child(4) { 
+        bottom: 12%; 
+        right: 4%; 
+        top: auto; 
+        left: auto; 
+    }   /* 🧪 Biochemistry */
+}
+
         @keyframes floatA{0%,100%{transform:translateY(0px) rotate(-1deg)} 50%{transform:translateY(-14px) rotate(1deg)}}
         @keyframes floatB{0%,100%{transform:translateY(0px) rotate(1deg)} 50%{transform:translateY(-18px) rotate(-1deg)}}
         @keyframes floatC{0%,100%{transform:translateY(0px)} 50%{transform:translateY(-12px)}}
